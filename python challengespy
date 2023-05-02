@@ -115,3 +115,21 @@ print(X>>2) #Signed right shift push copies of the leftmost bit in fromt hte lef
 #multiplication, addition/subtraction, BITWse left and right
 #bitwise And > XOR > OR > comparisons, identity and mebership
 #logical NOT > AND > OR 
+
+
+
+#TUPLE sequence of immutable objects which means that they cannot be changed. 
+#LIST VS TUPLE
+    #LIST can be changed uses []
+    #TUPLE can NOT be changed uses ()
+
+animal = ('Zebra', 'Aligator', 'Giraffe', 'Goat','Ox') #TUPLE
+
+#we want to change the above so create a list from the tuple so it can be changed
+
+listofanimals = list(animal)
+print(listofanimals)
+
+#to add we do :
+listofanimals.append ("Honey Badger")
+print(listofanimals)
