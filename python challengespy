@@ -1,0 +1,44 @@
+#Assign a string to a varible
+
+pig1 = "Hello! I have two pigs."
+
+#assign multiline string to a variable
+
+favquote = """ Agriculture is our wisest pursuit,
+because it will in the end contribute most to 
+real wealth, good morals, and hapiness. - Thomas Jefferson"""
+
+#return a range of characters by using slice
+X = slice(0, 10)
+print(favquote[X])
+#use the len() function
+print(len(pig1))
+#use strip()
+
+Y = favquote.strip()
+
+print("Welcome", Y, "Ruby and Cowboy")
+#use upper()
+
+Z = pig1.upper()
+print(Z)
+
+#use the in or not in keyword to check if it is present
+
+print("pigs" in pig1)
+if "two" in pig1:
+    print("Yes, 'two' is present")
+
+print("ruby" not in pig1)
+if "Ruby" not in pig1:
+    print("No, 'Ruby' is NOT present")
+
+#Concatenate a string
+pig2 = " One piglet. They're names are Ruby, Cowboy, and Lily."
+
+pigs = pig1 + pig2
+print(pigs)
+#use an escape character
+
+quoteHMC =" \"I feel ill,\"  Howl annouced. \"I'm going to bed, where I may die.\" - Howl's Moving Castle"
+print(quoteHMC)
