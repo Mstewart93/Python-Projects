@@ -42,3 +42,76 @@ print(pigs)
 
 quoteHMC =" \"I feel ill,\"  Howl annouced. \"I'm going to bed, where I may die.\" - Howl's Moving Castle"
 print(quoteHMC)
+
+#using seperate Data types
+
+#num1 = "one"
+num2 = 2.1
+
+#print(num1 + num2) #equals an error, trying to concatenate two strings but one is number
+# you can implicitly change a value.
+num1 = "1"
+print(int(num1)+num2)
+
+#arithmetic operator
+print(5 + 2)
+print(7 - 2)
+print(5 * 2)
+print(62 / 2)
+print(12 % 5) #returns the remainder
+print(2 ** 4) #exponent
+print(10 // 3) #will round the result to the nearest whole number
+
+#assignment operator is used to assign values to variables
+X = 5 #x=5
+X += 3 #x = x+3
+X -= #x = x-3
+X*=3 #X=X*3
+x/=3 #x= x/3
+x%=3 #x = X%3
+x//=3 #x = x//3
+X**=3 #x = X **3
+x&=3 #x=   X&3
+X | = 3 #X = X|3
+X ^=3 #x = X^3
+X>>=3 #x = X >> 3
+x<<=3 #x= X << 3
+
+#comparison operator
+print(x == y) #equal
+print(x!=y) #not equal
+print(x > y) # greater than
+print(x < y) #less than
+print(x >=y) #great than or equal to
+print(x <=y) #less than or equal 
+
+
+#Logical Operator
+
+print(x<5 and x<10) # and, both ahve to be true
+print(x <5 or x <4) # true if ONE is true
+print(not(x<5 and X<10)) # reverse the result true=false, false=true
+
+#identity operator
+
+print( x is y) #true if both the same
+print(x is not y) #true if they are not the same
+
+#membership operator
+
+print(x in y) #true if in
+print(x not in y) #true if not in
+
+#Use bitwise operator compare binary numers
+
+print(x & y) #AND sets each bit to 1 if both are 1
+print(x|y) #OR sets each bit to 1 if one of them is 1
+print(X^y) #XOR sets each bit to 1 if ONLY one of thm is one
+print(~x) #NOT inverst all the bits
+print(x<<2) #Zero fill left shift pushing zeros in from the right and let the leftmost fall off
+print(X>>2) #Signed right shift push copies of the leftmost bit in fromt hte left and let the rightmost bits fall off. 
+
+#PRECEDENCE parenthesis, exponentation, unary plus, unary minus bitwise NOT
+#multiplication, addition/subtraction, BITWse left and right
+#bitwise And > XOR > OR > comparisons, identity and mebership
+#logical NOT > AND > OR 
