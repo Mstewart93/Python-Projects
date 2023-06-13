@@ -34,7 +34,6 @@ def nice_mean(nice,mean,name):
             print("\n The stranger glares at you \n menacingly and stomps off...")
             mean = (mean + 1)
             stop = False
-        pick = input ("\n A small child runs up to talk to you, \n holding two popsicles. \nShe offers one to you. \n  Will you be kind \n or rude? (K/R)\n>>>").lower()
         if pick == "k":
             print("The child smiles at you, then runs off to her parents...")
             nice = (nice +1)
