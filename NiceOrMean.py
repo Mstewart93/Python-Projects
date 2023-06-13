@@ -34,12 +34,12 @@ def nice_mean(nice,mean,name):
             print("\n The stranger glares at you \n menacingly and stomps off...")
             mean = (mean + 1)
             stop = False
-        pick = input ("\n A small child runs up to talk to you, \n holding two popsicles. \nShe offers one to you. \n  Will you be nice \n or mean? (N/M)\n>>>").lower()
-        if pick == "n":
+        pick = input ("\n A small child runs up to talk to you, \n holding two popsicles. \nShe offers one to you. \n  Will you be kind \n or rude? (K/R)\n>>>").lower()
+        if pick == "k":
             print("The child smiles at you, then runs off to her parents...")
             nice = (nice +1)
             stop = False
-        if pick == "m":
+        if pick == "r":
             print("The child bursts into tears, her parents glaring at you as they come to comfort her...")
             mean = (mean +1)
             stop = False
@@ -87,5 +87,5 @@ def reset(nice,mean,name):
 
 
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
         start()
