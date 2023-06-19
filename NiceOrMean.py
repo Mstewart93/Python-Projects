@@ -33,7 +33,7 @@ def nice_mean(nice,mean,name):
         if pick == "m":
             print("\n The stranger glares at you \n menacingly and stomps off...")
             mean = (mean + 1)
-            stop = False
+            stop = Falsel
         if pick == "k":
             print("The child smiles at you, then runs off to her parents...")
             nice = (nice +1)
