@@ -12,35 +12,19 @@ with conn:
     conn.commit()
 conn.close
 
+ListName = ["information.docx", "Hello.txt", "myImage.png", \
+         "myMovie.mpg", "World.txt", "data.pdf", "myPhoto.jpg"]
+
+txtList = []
+def query_string ():
+    for (let i = 0; i <= listName.length; i++) {
+    x = txt.find("*.txt")
+    txtList.append(x)
+    } 
+
 
 with conn:
     cur = conn.cursor()
-    cur.execute("INSERT INTO tbl_filelist(file_name) VALUES(?)", \
-                ('information.docx')
-                )
-    cur.execute("INSERT INTO tbl_filelist(file_name) VALUES(?)", \
-                ('Hello.txt')
-                )
-    cur.execute("INSERT INTO tbl_filelist(file_name) VALUES(?)", \
-                ('myImage.png')
-                )
-    cur.execute("INSERT INTO tbl_filelist(file_name) VALUES(?)", \
-                ('myMovie.mpg')
-                )
-    cur.execute("INSERT INTO tbl_filelist(file_name) VALUES(?)", \
-                ('World.txt')
-                )
-    cur.execute("INSERT INTO tbl_filelist(file_name) VALUES(?)", \
-                ('data.pdf')
-                )
-    cur.execute("INSERT INTO tbl_filelist(file_name) VALUES(?)", \
-                ('myPhoto.jpg')
-                )
-    conn.commit
-conn.close
-
-with conn:
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM tbl_filelist WHERE field LIKE %.txt")
+    cur.execute(query_string)
     conn.commit
 conn.close
