@@ -1,0 +1,30 @@
+#Create two classes that inherit from another class.
+#Ensure each child has at least two of their own attributes.
+#Add comments throughout your Python explaining your code.
+
+class Sentiant: 
+    #define attributes
+    name = ""
+    health_points= ''
+    strength = 0
+    level = 0 
+
+    
+#otside of class create instance of the class
+new_user = Sentiant()
+
+def __init__ (self,name,health_points,strength,level):
+    self.name = name
+    self.health_points = health_points
+    self.strength = strength
+    self.level = level
+
+New_user =  Sentiant("Joe L.",10, 5, 1)
+
+class Druid(Sentiant):
+    Earth_Connection = 15
+    animal_forms = 0
+
+class Wizard(Sentiant):
+    MP = 0
+    Spell_size = 0
