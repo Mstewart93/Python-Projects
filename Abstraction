@@ -1,0 +1,22 @@
+#Your class should contain at least one abstract method and one regular method.  
+#Create a child class that defines the implementation of its parents abstract method.
+#Create an object that utilizes both the parent and child methods.
+ 
+from abc import ABC, abstractclassmethod
+
+class Pig(ABC):
+    def feedCost(self, amount):
+        print("Your monthly cost is: ", amount)
+    @abstractmethod 
+    def payment (self amount):
+        pass
+
+class check(Pig):
+    def payent(self, amount):
+        print('Your purchase amount of {} exceeded your $100 limit '.format(amount))
+
+obj = check()
+obj.feedCost("$400")
+obj.payment("$400")
+
+    
