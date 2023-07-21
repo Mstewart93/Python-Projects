@@ -6,19 +6,20 @@
 
 class Animal:
     def Dog(self):
-        self.protectedcolor = "Yellow" #originally set 
-
-    def Cat(self):
-        self.privatelives = 9
-        def getlives(self):
-            print(self._privatelives)
-        def setlives(self, private):
-            self.privatelives = private
-            #the folowing make use of protected and private
+        self._protectedvar = "Yellow" #originally set 
 obj = Animal()
-obj.protectedcolor = "Black" #you still have ability to change, just warns them
-print(obj.protectedcolor)
-cobj = Cat()
-cobj.getlives()
-cobj.setlives(10)
-cobj.getlives
+obj._protectedcolor = "Black" #you still have ability to change, just warns them
+print(obj._protectedcolor)
+
+class Cat:
+        def __init__(self):
+            self.__privatelives = 9
+        def getlives(self):
+            print(self.__privatelives)
+        def setlives(self, private):
+            self.__privatelives = private
+            #the folowing make use of protected and private
+obj = Cat()
+obj.getlives()
+obj.setlives(10)
+obj.getlives
