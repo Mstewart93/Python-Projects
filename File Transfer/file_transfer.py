@@ -73,10 +73,16 @@ class ParentWindow(Frame):
         #gets a list of files in the source directory
         source_files = os.listdir(source)
         #runs through each file in the source directory
+
         for i in source_files:
+           x =  datetime.now()
+           y = os.path.getmtime(source)
+           z = y - X
+           for i in source_files where z < 24:
             #moves each file from the source to the destination
             shutil.move(source + '/' + i, destination)
             print(i + ' was successfully transferred.')
+           
 
 #creates function to exit program
             def exit_program(self):
