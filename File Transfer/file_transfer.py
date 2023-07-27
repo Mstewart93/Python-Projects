@@ -1,4 +1,4 @@
-import tkinter as tk
+    import tkinter as tk
 from tkinter import*
 import tkinter.filedialog
 import os
@@ -75,20 +75,23 @@ class ParentWindow(Frame):
         #runs through each file in the source directory
 
         for i in source_files:
-           x =  datetime.now()
-           y = os.path.getmtime(i)
-           z = y - X
-           for i in range (0, 24):
+           w =  datetime.datetime.now()
+           x = today - datetime.timedelta(days=1)
+           y = os.path.getmtime(i) 
+           z = y - x
+           m = z.total_seconds()/60 
+           for i in source_files:
             #moves each file from the source to the destination
-            shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')
+                if i < 1440:
+                    shutil.move(source + '/' + i, destination)
+                    print(i + ' was successfully transferred.')
            
 
 #creates function to exit program
-            def exit_program(self):
-                #root is the main GUI window, the Tkinter destroy method
-                #teslls python to terminate root.mainloop and ll idgets inside the GUI window
-                root.destroy()
+     def exit_program(self):
+        #root is the main GUI window, the Tkinter destroy method
+        #teslls python to terminate root.mainloop and ll idgets inside the GUI window
+          root.destroy()
                         
 if __name__ == "__main__":
     root = tk.Tk()
