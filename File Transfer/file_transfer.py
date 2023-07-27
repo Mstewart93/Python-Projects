@@ -76,9 +76,9 @@ class ParentWindow(Frame):
 
         for i in source_files:
            x =  datetime.now()
-           y = os.path.getmtime(source)
+           y = os.path.getmtime(i)
            z = y - X
-           for i in source_files where z < 24:
+           for i in range (0, 24):
             #moves each file from the source to the destination
             shutil.move(source + '/' + i, destination)
             print(i + ' was successfully transferred.')
