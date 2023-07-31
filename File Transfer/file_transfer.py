@@ -3,6 +3,7 @@ from tkinter import*
 import tkinter.filedialog
 import os
 import shutil
+import time
 import datetime
 
 
@@ -66,30 +67,25 @@ class ParentWindow(Frame):
 
 #creates the function to actually  transfer files from one directory to another
     def transferFiles(self):
+        day = 24*60*60
+        now = time.time()
+        past = now - day 
+        file_time = os.path.getmtime(source_file)
         #gets source directory
         source = self.source_dir.get()
         #gets destination directory
-        destination = self.source_dir.get()
+        destination = self.destination_dir.get()
         #gets a list of files in the source directory
         source_files = os.listdir(source)
         #runs through each file in the source directory
 
-        for i in source_files:
-            shutil.move(source + '/' + i, destination)
-            print(i + ' was successfully transferred.')
+        for i in os.listdir(self.source_dir.get()):
+            source_file = os.path.join(source ,  i)
+            destination_file = os.path.join(destination ,  i)
+            if file_time < past: 
 
-        #for i in source_files:
-           #w =  datetime.datetime.now()
-           #x = today - datetime.timedelta(days=1)
-           #y = os.path.getmtime(i) 
-           #z = y - x
-          # m = z.total_seconds()/60 
-           #for i in source_files:
-            #moves each file from the source to the destination
-               # if i < 1440:
-                   # shutil.move(source + '/' + i, destination)
-                    #print(i + ' was successfully transferred.')
-           
+                shutil.move(source_file, destination_file)
+                print(i + ' was successfully transferred.')
 
 #creates function to exit program
     def exit_program(self):
