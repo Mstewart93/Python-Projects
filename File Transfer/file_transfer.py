@@ -70,7 +70,7 @@ class ParentWindow(Frame):
         day = 24*60*60
         now = time.time()
         past = now - day 
-        file_time = os.path.getmtime(source_file)
+        
         #gets source directory
         source = self.source_dir.get()
         #gets destination directory
@@ -81,8 +81,9 @@ class ParentWindow(Frame):
 
         for i in os.listdir(self.source_dir.get()):
             source_file = os.path.join(source ,  i)
+            file_time = os.path.getmtime(source_file)
             destination_file = os.path.join(destination ,  i)
-            if file_time < past: 
+            if file_time > past: 
 
                 shutil.move(source_file, destination_file)
                 print(i + ' was successfully transferred.')
