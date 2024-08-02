@@ -1,5 +1,5 @@
 # Python Projects
- This is where I will store all of my learning and experimenting with Python.
+ A collection of learning notes, experiments,and completed projects along the way. 
 
  <h1><a href="https://github.com/Mstewart93/Python-Projects/tree/main/Phonebook">Phone Book</a></h1>
  <p>This project functions as a phonebook for the user. It saves the contact information in a database and allows the user to update and delet previously stored information.</p>
